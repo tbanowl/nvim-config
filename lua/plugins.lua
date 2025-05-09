@@ -135,6 +135,13 @@ require("lazy").setup({
             require("config.im-select")
         end,
     },
+    -- Telescope 列表模糊查找器
+    "nvim-lua/plenary.nvim",
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.8",
+        dependencies = { "nvim-lua/plenary.nvim"}
+    }
 
 
 })
