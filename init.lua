@@ -1,17 +1,17 @@
 -- Load Options
 require('options')
-if vim.g.vscode then
-    print("gui is vscode")
-    return
-end
 -- Load keymap
 require('keymap')
--- Load Packervim
+if vim.g.vscode then
+    require('vscode_config')
+    return
+end
+-- Load Plugins
 require('plugins')
--- Set colorscheme
-require('colorscheme')
 -- Set LSP
 require('lsp')
+-- Set colorscheme
+require('colorscheme')
 require("notify").setup({
     background_colour = "#000000",
 })

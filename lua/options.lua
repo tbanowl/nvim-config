@@ -12,7 +12,7 @@ opt.expandtab = true -- tabs are spaces, mainly because of python
 opt.clipboard:append("unnamedplus")
 
 -- UI config
-opt.number = true -- show absolute number
+opt.number = true -- show absolute line number
 opt.showmode = true -- show mode
 opt.relativenumber = true -- add numbers to each line on the left side
 opt.cursorline = true -- highlight cursor line underneath the cursor horizontally
