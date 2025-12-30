@@ -48,7 +48,7 @@ require('mason-lspconfig').setup({
 -- How to use setup({}): https://github.com/neovim/nvim-lspconfig/wiki/Understanding-setup-%7B%7D
 --     - the settings table is sent to the LSP.
 --     - on_attach: a lua callback function to run after LSP attaches to a given buffer.
-local lspconfig = require 'lspconfig'
+local lspconfig = vim.lsp
 
 -- Customized on_attach function.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions.
@@ -110,15 +110,15 @@ end
 -- 1. Use `:Mason` to install the corresponding LSP.
 -- 2. Add the configuration below. The syntax is `lspconfig.<name>.setup(...)`
 -- Hint (find <name> here) : https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-lspconfig.pylsp.setup({
+vim.lsp.config('pylsp', {
     on_attach = on_attach,
 })
 
-lspconfig.gopls.setup({
+vim.lsp.config('gopls', {
     on_attach = on_attach,
 })
 
-lspconfig.lua_ls.setup({
+vim.lsp.config('lua_ls', {
     on_attach = on_attach,
     settings = {
         Lua = {
@@ -142,22 +142,20 @@ lspconfig.lua_ls.setup({
     },
 })
 
-lspconfig.bashls.setup({})
+vim.lsp.config('bashls', {
+    on_attach = on_attach
+})
 
-lspconfig.rust_analyzer.setup({
+vim.lsp.config('rust_analyzer', {
     -- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
     on_attach = on_attach,
 })
 
-lspconfig.clangd.setup({
+vim.lsp.config('ocamllsp', {
     on_attach = on_attach,
 })
 
-lspconfig.ocamllsp.setup({
-    on_attach = on_attach,
-})
-
-lspconfig.ruby_lsp.setup({
+vim.lsp.config('ruby_lsp', {
     on_attach = on_attach,
 })
 
@@ -168,14 +166,13 @@ lspconfig.ruby_lsp.setup({
 --     Place your compiler flags in the compile_flags.txt file, located in the root directory
 --     of your project. Each line in the file should contain a single compiler flag.
 -- src: https://clangd.llvm.org/installation#compile_commandsjson
-lspconfig.clangd.setup({
+vim.lsp.config('clangd', {
     on_attach = on_attach,
 })
 
-lspconfig.hls.setup({
+vim.lsp.config('hls', {
     on_attach = on_attach,
 })
-
 
 local java_config = {
     cmd = {
@@ -265,6 +262,6 @@ local java_on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
 end
 
-lspconfig.jdtls.setup({
-    on_attach = on_attach,
+vim.lsp.config('jdtls', {
+    on_attach = on_attach
 })

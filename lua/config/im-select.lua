@@ -20,7 +20,7 @@ im_select.setup({
     -- For Windows/WSL, default: "im-select.exe"
     -- For macOS, default: "macism"
     -- For Linux, default: "fcitx5-remote" or "fcitx-remote" or "ibus"
-    default_command = "macism",
+    default_command = "/opt/homebrew/bin/macism",
 
     -- Restore the default input method state when the following events are triggered
     set_default_events = { "VimEnter", "FocusGained", "InsertLeave", "CmdlineLeave" },
