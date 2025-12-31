@@ -16,8 +16,3 @@ keymap.set("i", "j;", "<ESC>A;<ENTER>")
 -- ------------- Normal -------------
 -- 模式：n Normal模式
 
--- 窗口
-if vim.g.vscode then
-    require('keymap.vscode')
-    return
-end

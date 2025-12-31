@@ -1,4 +1,5 @@
 local is_ok, im_select = pcall(require, 'im_select')
+print('im-select:', is_ok)
 if not is_ok then
     return
 end
