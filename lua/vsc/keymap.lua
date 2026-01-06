@@ -19,5 +19,7 @@ keymap.set('i', 'jj', code_action('vscode-neovim.escape'))
 
 -- Normal 模式 ---------------------
 keymap.set('n', '<Leader>f', code_action('editor.action.formatDocument'))
+-- 重命名
+keymap.set('n', '<Leader>r', code_action('editor.action.rename'))
 
 -- Visual 模式 ---------------------

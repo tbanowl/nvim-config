@@ -13,7 +13,7 @@ im_select.setup({
     --               "1" for Fcitx
     --               "xkb:us::eng" for ibus
     -- You can use `im-select` or `fcitx5-remote -n` to get the IM's name
-    default_im_select = "com.apple.keylayout.ABC",
+    default_im_select = "com.apple.keylayout.UnicodeHexInput",
 
     -- Can be binary's name, binary's full path, or a table, e.g. 'im-select',
     -- '/usr/local/bin/im-select' for binary without extra arguments,
