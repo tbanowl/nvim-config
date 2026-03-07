@@ -11,6 +11,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local is_vscode = vim.g.vscode
+
 require("lazy").setup({
     -- Theme onedark
     {
@@ -145,6 +147,7 @@ require("lazy").setup({
     {
         "OXY2DEV/markview.nvim",
         lazy = false,
+        enabled = not is_vscode
     },
     -- yazi
     {
