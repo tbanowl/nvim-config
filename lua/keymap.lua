@@ -7,10 +7,15 @@ local keymap = vim.keymap
 -- ------------- 插入模式 -------------
 keymap.set("i", "jj", "<ESC>")
 keymap.set("i", "j;", "<ESC>A;<ENTER>")
-keymap.set("i", "j<ENTER>", "<ESC>A<ENTER>")
+keymap.set("i", "ja", "<ESC>a")
+keymap.set("i", "jA", "<ESC>A")
+keymap.set("i", "jo", "<ESC>o")
+keymap.set("i", "jO", "<ESC>O")
 keymap.set("i", "ju", "<ESC>ui")
 keymap.set("i", "jw", "<ESC>wi")
-keymap.set("i", "je", "<ESC>ei")
+keymap.set("i", "j:q", "<ESC>:q<ENTER>")
+keymap.set("i", "j:wq", "<ESC>:wq<ENTER>")
+keymap.set("i", "je", "<ESC>ea")
 keymap.set("i", "jb", "<ESC>bi")
 
 -- ------------- 视觉模式 -------------
